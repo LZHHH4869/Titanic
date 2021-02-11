@@ -1,0 +1,72 @@
+---
+title: "Assignment2"
+author: "Zonghao Li"
+date: "2021/2/11"
+output: word_document
+---
+
+# Part I: Gentzkow and Shapiro
+## Question1: "Summarize briefly the point of chapters 2- 8 in less than one page."
+Paragraph2: Using the project to verify that the introduction of television to the US increased sales of potato chips as an example, it's worth thinking about why we don't like the interactive mode. We need automation for two main reasons: reproducibility and efficiency. To this end, most researchers learn to write key steps, especially data manipulation and statistical analysis. To make our directory output replicable, we need to automate more steps, such as storing information about the order in which the steps are run. Of course, not everything is needed to be automated. On the other hand, it turns out that pushing the boundaries of automation has huge benefits.
+
+Paragraph3: We need to maintain a single, authoritative version of our directory. In addition, the ability to edit without fear is a major side benefit. The software handles the version for us, so we can focus on writing the code and getting it correctly. In fact, version control is also great for our draft papers. We can interact with it using the Windows Hawksbill Browser. Macs have similar software. More recent version control methods, such as Git or BitBucket.
+
+Paragraph4: We need to pay attention to three rules: separating the directories by function; dividing a file into input and output; making the directory portable. What we actually do in practice is a little more complicated: we link to a fixed revision of the dataset on a shared network store, making the previously edited directory available to run anywhere via network access.
+
+Paragraph5: Getting the relational database makes the ambiguity fade away. Storing standardized data means that data will be easier to understand and harder to make costly mistakes. We need to merge the tables together to produce a single rectangular array. In addition, we may need to calculate some variables that are not in our source data, such as the logarithm of the population.
+
+Paragraph6: We need to realize that all the code blocks are just concrete instances of the same abstraction: need to compute the average value of a variable over a set of observations, except for the given observation. It eliminates redundancy and reduces the range of errors. However, if an operation needs to be performed only once and the code to perform it is easy to read, we do not need to recommend abstraction. Moreover, abstraction is more than just code. It relates to any place where you find yourself repeating an operation.
+
+Paragraph7: It suggests that we should document less, not more. To avoid this confusion, we need to keep the comments up to date, just like our code. If it's not worth maintaining a document to a certain standard, it's probably not worth writing it in the first place. Most of the comments can be easily incorporated into the code. If possible, then we should write our code as self-documenting. Documentation can also be used to prevent unexpected behavior.
+
+Paragraph8: Using the example of Michael, Jesse, and Matt that even after all the emails, it was still not clear who was going to do which task, we should be aware that e-mail cannot be used as a task management system. There are a number of good and free online task management systems, most of which have applications for mobile devices and offer some kind of e-mail integration, including Asana, Wrige and Flow. If you want to add rich accessories, there are many options, such as Evernote and OneNote.
+
+## Question2:"Why do Genztkow and Shapiro think these elements of modern empirical work are so important? What problems does each element solve?"
+In a previous project, the authors' team did a lot of research and found that many observations were lost in a merge because they lacked the value of the county identifier that they were merging. Then they realized that they were actually using different definitions in different places, so some of the results were based on inconsistent samples. Updating the code to extend the analysis was nearly impossible. Eventually, they gave up and rewrote all the code from scratch. After that, they increasingly realized that there had to be a way to do it better, and that they needed to think about database designing. This tells us that a lot of times, when we solve a problem with code and data, we are solving a problem that has been solved before, better, and on a larger scale. Recognizing this allows us to spend less time wrestling with our messy code and more time on the research problems that interest you in the first place.
+
+Automation solves the problem of reproducibility and efficiency. Versioning, combined with rules to check that a directory is fully operational, provides a comprehensive solution that guarantees reproducibility and revocability with minimal effort. Analyses can now be easily modified without rerunning the data. Keywords and standardization can make data easier to understand and harder to make costly mistakes. Abstraction eliminates redundancy, reduces the scope for errors, and makes the code easier to read. Documentation can address internal inconsistencies and how to make code clear without a lot of comments. Management can address the question of whose responsibility the task is or what the goal is.
+
+## Question3:"Give an example of the sort of problem that could arise in the course of an empirical project if someone were to fail to adopt these principles."
+Let's say Jesse modifies cleandata.do and runs it to override tedata.dta. If Jesse had checked for this change, Matt might have found that it would break later when he tried to run regressions.do, because the tvdata.dta change to regressions.do was unexpected. The solution to this problem is to run rundirectory.bat from start to finish and check for errors before checking the directory. Then internal inconsistencies are especially problematic when it comes to documents -- comments, readbacks, and so on. But they don't know how to make the code clear without a lot of comments. Finally, when communicating with team members about the completion of the task, information cannot be effectively exchanged, and the task is whose responsibility or what the goal is ambiguous, resulting in confusion and confusion.
+
+## Question4:"How do you plan to incorporate these solutions into your own work?"
+From my point of view, this article is still biased towards theory, so how to apply it to practice is a question that should be considered. This involves writing code, which is one of the more difficult challenges I face. It is also mentioned in the article that you can use Git, GitHub and other software, which are also recommended by professor and will be used frequently in this semester. I ask people or look up information on how to use such type of software like GitHub. Since I have never done a project like the steps taught in this article before, I will read this article again in the future to deepen my understanding of the reason.
+
+# Part II: Git and GitHub
+## Question5:"Create a new section in the document you used to answer questions 1-4. Briefly explain what git and github are used for, how they are similar and how they are different."
+Git is a distributed version control system, which combines Dropbox and the "Track changes" feature in MS Word. In fact, it's even better.
+
+GitHub is an online hosting platform that provides an array of services built on top of the Git system. (Bitbucket and GitLab are similar platforms.) 
+
+These two have several similarities. Like R and Rstudio, Git and Github have many same and similar characteristics, such as: tracking changing and historical backup. Team development is another common benefit: it allows a team of developers to actually work on the same code simultaneously and then merge their changes in together to make progress on a project.
+
+On the other hand, they have some differences too. It's important to realize that Git and GitHub are distinct things. Git deals with data on the local machine, while Github is on the web. Let’s think about what happens if someone works on two computers at the same time. This is where GitHub comes in. We should be careful not to confuse it with Git. GitHub takes the commit history in Git and stores it on the Internet, so you can access it from any computer. You push submissions to GitHub on your machine (for example, the computer you are currently using), and then pull the submissions from another new or different computer. Just like we don't need Rstudio to run R code, we don't need GitHub to use Git! But it will make our lives so much easier. 
+
+## Question6:"Name a benefit of using git to organize your empirical research. What types of common problems can occur if you don’t use git?"
+Take Sally as an example. She is a novelist. If Sally had been using Word with Git, he would have been able to do a neat summary of all the related changes about "bringing sprites to the collection." She can see all the pages, chapters, documents, and revisions in each book, giving her a true understanding of the impact that the introduction of fairies had on her fantasy series. This "brief summary" is what we call a commit in Git.
+
+Sally has written the first book in the series and sent it to her editor. Moreover, because she was so talented, she wrote the first three chapters of the second book while waiting for the editor's feedback. A separate World file is created for each book. She wanted to introduce new characters in the first book and to revise the storyline. After finishing the first book, she wanted to make necessary changes to the storyline of the second book. With all these changes, she needed to introduce a location into the first book instead of the second. Sally was actually working with a system. Her two books influenced each other. Characters, locations and plots flew through the two books. Unfortunately, a month later, there was nothing left in her file system. Word's "Document History" tool, or the sticky paper she used to paste around the edge of the screen to record the changes, would put all the changes together. This caused such a mess.
+
+## Question7:"What about using git is challenging for you for right now? What steps can you take to minimize those challenges such that you can adopt git for this class?"
+Push the changes made in md Document in RStudio to GitHub: maybe I should familiarize myself with PPT in the assignment again.
+
+Writing code in RStudio presents challenges too since I had little programming experience before. The important thing is to communicate with classmates and exchange ideas, and also look up many materials to get better.
+
+## Question8:"Name the four main Git operations. What does each operation do and how are is each operation different from one another?"
+1) Stage (or "add"): Tell Git that you want to add changes to the repo history (file edits, additions, deletions, etc.)
+2) Commit: Tell Git that, yes, you are sure these changes should be part of the repo history.
+3) Pull: Get any new changes made on the GitHub repo (i.e. the upstream remote), either by your collaborators or you on another machine.
+4) Push: Push any (committed) local changes to the GitHub repo.
+
+How they are different to each other? ‘Stage’ is the operation before ‘Commit’, which means that after modifying the file, we can click "Commit", thus keeping the changes this time. ‘Stage’ is only to make some changes. Similarly, after doing ‘Push’, which sends any committed changes to GitHub, we can do ‘Pull’ to achieve these changes on the GitHub repo. Thus, for the moment, it will be useful to group the first two operations and last two operations together. They are often combined in practice too.
+
+## Question9:"The first step in your new empirical workflow is the creation of a Github repository (“repo”). You can either do this independently or do this through R functionality.  You need to create a github account, then create your first repository called “Titanic”. Initialize with a Readme and create the separate folders that we discussed in class on Monday."
+## Question10:"Post a link to your repository."
+https://github.com/LZHHH4869/Titanic
+
+## Question11:"Please clone our course github repository on your desktop."
+The address in my computer is: E:\DOU\UTAu\Spring2021\Casual\GitHub.
+
+
+
+
